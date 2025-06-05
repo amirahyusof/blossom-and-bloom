@@ -12,25 +12,55 @@ import TestimonialSection from "@/components/testimonials"
 import Footer from "@/components/footer"
 
 export default function Home() {
-  // Hide scrollbar but keep functionality
+  // Better scrollbar hiding implementation
   useEffect(() => {
-    document.body.style.overflow = "auto";
-    document.body.style.scrollbarWidth = "none"; // Firefox
-    (document.body.style as any).msOverflowStyle = "none"; // IE/Edge
+    // Create a more comprehensive style sheet
+    const styleId = 'hide-scrollbar-styles'
+    
+    // Remove existing style if it exists
+    const existingStyle = document.getElementById(styleId)
+    if (existingStyle) {
+      existingStyle.remove()
+    }
 
     const style = document.createElement("style")
+    style.id = styleId
     style.textContent = `
+      /* Hide scrollbar for Chrome, Safari and Opera */
       body::-webkit-scrollbar {
-        display: none;
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      body {
+        -ms-overflow-style: none !important;  /* IE and Edge */
+        scrollbar-width: none !important;     /* Firefox */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+      }
+      
+      /* Additional fallbacks */
+      html::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+      }
+      
+      html {
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
       }
     `
-    document.head.appendChild(style)
+    
+    // Insert at the beginning of head to ensure it has priority
+    document.head.insertBefore(style, document.head.firstChild)
 
     return () => {
-      document.body.style.overflow = "";
-      document.body.style.scrollbarWidth = "";
-      (document.body.style as any).msOverflowStyle = "";
-      document.head.removeChild(style)
+      const styleToRemove = document.getElementById(styleId)
+      if (styleToRemove) {
+        styleToRemove.remove()
+      }
     }
   }, [])
 
@@ -57,7 +87,6 @@ export default function Home() {
     </main>
   )
 }
-
 
 
 

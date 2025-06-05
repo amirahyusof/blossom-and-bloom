@@ -20,7 +20,7 @@ export default function ContactSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          Let's Talk Flowers!
+          Let&quot;s Talk Flowers!
         </motion.h2>
 
         <motion.p
@@ -29,7 +29,7 @@ export default function ContactSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Have a special request? Drop us a message — we'd love to hear from you.
+          Have a special request? Drop us a message — we&quot;d love to hear from you.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">

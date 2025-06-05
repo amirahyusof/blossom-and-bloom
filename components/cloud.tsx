@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 
 const CloudComponent = () => {
   const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true });
+
 
   // Cloud shape component
   const CloudShape = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (

@@ -43,7 +43,7 @@ export default function TestimonialSection() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <div className="text-3xl md:text-4xl mb-3 md:mb-4">"</div>
+              <div className="text-3xl md:text-4xl mb-3 md:mb-4">&quot;</div>
               <p className="text-gray-700 italic mb-3 md:mb-4 text-sm md:text-base">{testimonial.text}</p>
               <p className="text-[#89B9AD] font-semibold text-sm md:text-base">– {testimonial.author}</p>
             </motion.div>

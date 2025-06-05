@@ -22,7 +22,7 @@ export default function AboutSection() {
 
           <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
             At <span className="font-semibold italic">Blossom & Bloom</span>, we believe in the art of expression
-            through petals. Whether it's a birthday, wedding, or just because — our arrangements are thoughtfully
+            through petals. Whether it&quot;s a birthday, wedding, or just because — our arrangements are thoughtfully
             designed to reflect your emotions. Locally owned, environmentally conscious, and community-loved.
           </p>
 
