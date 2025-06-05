@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const FlowerGardenHero = () => {
+export default function FlowerGarden(){
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -70,4 +70,3 @@ const FlowerGardenHero = () => {
   );
 };
 
-export default FlowerGardenHero;
