@@ -321,7 +321,7 @@
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #6bf0ff;
+  background-color: #FFC5C5;
   filter: blur(10vmin);
 }
 
@@ -332,10 +332,12 @@
   width: 8vmin;
   height: 11vmin;
   border-radius: 51% 49% 47% 53% / 44% 45% 55% 69%;
-  background: linear-gradient(to top, #54b8aa, #a7ffee);
+  background: linear-gradient(to top, #89B9AD, #C7DCA7);
+  box-shadow: 
+    inset 0 0 2vmin rgba(255, 235, 216, 0.5),
+    0 0 1vmin rgba(199, 220, 167, 0.4);
   transform-origin: bottom center;
   opacity: 0.9;
-  box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
 }
 
 .flower-leaf-1 { transform: translate(-10%, 1%) rotateY(40deg) rotateX(-50deg); }
@@ -347,9 +349,52 @@
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(-0%, 18%) rotateX(70deg) rotate(-43deg);
-  background: linear-gradient(to top, #39c6d6, #a7ffee);
+  background: linear-gradient(to top, #6B9B8F, #C7DCA7);
   z-index: 1;
   opacity: 0.8;
+}
+
+/* Variation 1 - Deeper green tones */
+.flower-1 .flower-leaf,
+.flower-4 .flower-leaf {
+  background: linear-gradient(to top, #6B9B8F, #B8D194);
+}
+
+/* Variation 2 - Lighter, more yellow-green */
+.flower-2 .flower-leaf,
+.flower-5 .flower-leaf {
+  background: linear-gradient(to top, #9BC4B8, #D4E5B7);
+}
+
+/* Variation 3 - More saturated green */
+.flower-3 .flower-leaf,
+.flower-6 .flower-leaf {
+  background: linear-gradient(to top, #7AB3A3, #B5D49A);
+}
+
+/* Variation 4 - Cooler green tone */
+.flower-7 .flower-leaf {
+  background: linear-gradient(to top, #82B5AA, #C2DFB3);
+}
+
+/* Smaller petals variations */
+.flower-1 .flower-leaf-4,
+.flower-4 .flower-leaf-4 {
+  background: linear-gradient(to top, #5A8A7E, #B8D194);
+}
+
+.flower-2 .flower-leaf-4,
+.flower-5 .flower-leaf-4 {
+  background: linear-gradient(to top, #8BB3A7, #D4E5B7);
+}
+
+.flower-3 .flower-leaf-4,
+.flower-6 .flower-leaf-4 {
+  background: linear-gradient(to top, #6AA292, #B5D49A);
+}
+
+.flower-7 .flower-leaf-4 {
+  background: linear-gradient(to top, #72A49F, #C2DFB3);
 }
 
 .flower-white-circle {
@@ -359,7 +404,8 @@
   width: 9vmin;
   height: 4vmin;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #FFEBD8;
+  box-shadow: 0 0 1vmin rgba(255, 197, 197, 0.6);
 }
 
 .flower-white-circle::after {
@@ -371,14 +417,14 @@
   width: 60%;
   height: 60%;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgb(255, 235, 18), rgb(255, 206, 0));
+   background: linear-gradient(90deg, #FFC5C5, #FFEBD8);
 }
 
 .flower-line {
   height: 15vmin;
   width: 1.5vmin;
   background: linear-gradient(to left, rgba(0,0,0,0.2), transparent, rgba(255,255,255,0.2)),
-              linear-gradient(to top, transparent 10%, #14757a, #39c6d6);
+              linear-gradient(to top, transparent 10%, #89B9AD, #C7DCA7);
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
   animation: grow-flower-tree 4s backwards;
 }
@@ -391,7 +437,7 @@
   height: 9vmin;
   border-top-right-radius: 9vmin;
   border-bottom-left-radius: 9vmin;
-  background: linear-gradient(to top, rgba(20, 117, 122, 0.4), #39c6d6);
+  background: linear-gradient(to top, rgba(137, 185, 173, 0.6), #C7DCA7);
 }
 
 .flower-line-leaf-1 { transform: rotate(70deg) rotateY(30deg); }
@@ -425,13 +471,36 @@
   bottom: 0;
   width: 1vmin;
   height: 1vmin;
-  background-color: rgb(255, 251, 0);
+  background-color: #FFC5C5;
+  box-shadow: 
+    0 0 1.5vmin rgba(255, 197, 197, 1),
+    0 0 3vmin rgba(255, 197, 197, 0.6);
+  filter: blur(0.1vmin);
   border-radius: 50%;
-  filter: blur(0.2vmin);
   animation: light-ans 4s linear infinite backwards;
 }
 
-.flower-light:nth-child(odd) { background-color: #23f0ff; }
+.flower-light:nth-child(odd) { 
+  background-color: #C7DCA7;
+  box-shadow: 
+    0 0 1.5vmin rgba(199, 220, 167, 1),
+    0 0 3vmin rgba(199, 220, 167, 0.6); 
+}
+
+.flower-light:nth-child(3n) {
+  background-color: #FFEBD8;
+  box-shadow: 
+    0 0 1.5vmin rgba(255, 235, 216, 1),
+    0 0 3vmin rgba(255, 235, 216, 0.6);
+}
+
+.flower-light:nth-child(4n) {
+  background-color: #89B9AD;
+  box-shadow: 
+    0 0 1.5vmin rgba(137, 185, 173, 1),
+    0 0 3vmin rgba(137, 185, 173, 0.6);
+}
+
 .flower-light-1 { left: -2vmin; animation-delay: 1s; }
 .flower-light-2 { left: 3vmin; animation-delay: 0.5s; }
 .flower-light-3 { left: -6vmin; animation-delay: 0.3s; }
